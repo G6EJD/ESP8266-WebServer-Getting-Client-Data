@@ -66,7 +66,7 @@ void HandleClient() {
      webpage += "Please enter your details:<input type='text' name='user_input'>&nbsp;<input type='submit' value='Enter'>";
     webpage += "</form>";
    webpage += "</body>";
-  webpage == "</html>";
+  webpage += "</html>";
   server.send(200, "text/html", webpage); // Send a response to the client asking for input
   if (server.args() > 0 ) { // Arguments were received
     for ( uint8_t i = 0; i < server.args(); i++ ) {
@@ -95,7 +95,7 @@ void ShowClientResponse() {
     webpage += "<h1><br>ESP8266 Server - This was what the client sent</h1>";
     webpage += "<p>Response received was: " + Clients_Response + "</p>";
    webpage += "</body>";
-  webpage == "</html>";
+  webpage += "</html>";
   server.send(200, "text/html", webpage); // Send a response to the client asking for input
 }
 
