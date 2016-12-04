@@ -61,8 +61,8 @@ void HandleClient() {
     webpage += "</style>";
    webpage += "</head>";
    webpage += "<body>";
-    webpage += "<h1><br>ESP8266 Server - Getting input from a client</h1>";
-    webpage += "<form action='http://192.168.0.24' method='POST'>";
+     String IPaddress = WiFi.localIP().toString();
+     webpage += "<form action='http://"+IPaddress+"' method='POST'>";
      webpage += "Please enter your details:<input type='text' name='user_input'>&nbsp;<input type='submit' value='Enter'>";
     webpage += "</form>";
    webpage += "</body>";
