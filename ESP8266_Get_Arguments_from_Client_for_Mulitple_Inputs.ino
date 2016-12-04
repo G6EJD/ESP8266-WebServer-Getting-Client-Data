@@ -67,7 +67,7 @@ void HandleClient() {
      webpage += "Please enter your Address:<input type='text' name='address_input'>&nbsp;<input type='submit' value='Enter'>"; // omit <input type='submit' value='Enter'> for just 'enter'
     webpage += "</form>";
    webpage += "</body>";
-  webpage == "</html>";
+  webpage += "</html>";
   server.send(200, "text/html", webpage); // Send a response to the client asking for input
   if (server.args() > 0 ) { // Arguments were received
     for ( uint8_t i = 0; i < server.args(); i++ ) {
@@ -104,7 +104,7 @@ void ShowClientResponse() {
     webpage += "<p>Name received was: " + Clients_Response1 + "</p>";
     webpage += "<p>Address received was: " + Clients_Response2 + "</p>";
    webpage += "</body>";
-  webpage == "</html>";
+  webpage += "</html>";
   server.send(200, "text/html", webpage); // Send a response to the client asking for input
 }
 
