@@ -46,6 +46,8 @@ void setup() {
   server.begin(); Serial.println("Webserver started..."); // Start the webserver
   Serial.print("Use this URL to connect: http://");// Print the IP address
   Serial.print(WiFi.localIP());Serial.println("/");
+  // NOTE: You must use the IP address assigned to YOUR Board when printed/displayed here on your serial port
+  // that's the address you must use, not the one I used !
   
   // Next define what the server should do when a client connects
   server.on("/", HandleClient); // The client connected with no arguments e.g. http:192.160.0.40/
